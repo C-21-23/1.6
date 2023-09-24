@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    .h1{
+        display: block;
+        margin-left: 550px;
+        margin-right: 550px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        background-color: rgb(195, 242, 6);
+    } /*Параметри заголовка*/
+    table{ border: 1px; 
+  text-align:center;
+  border-collapse: collapse;
+  width:55%;
+  padding-left: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+  } /*Параметри таблиці*/
+  .img1{
+    display: block;
+    float: left;
+    padding-right: 0px;
+    margin-top: 115px;
+} /*Параметри фото*/
+.form{ 
+    display: block;
+    float:right;
+} /*Параметри форми*/
+
+tr,td{ border: 2px solid rgb(9, 6, 63);
+    text-align:center;
+    border-radius: 5px;
+    background-color: rgb(162, 221, 170);
+    height: 95px;
+} /*Параметри рядка та ячейки*/
+.form-container {
+             background-color:  #42c885;
+            padding: 10px;
+            width: 220px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            float: right;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block; 
+            margin-bottom: 5px; 
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 200px;
+            padding: 10px; 
+            margin-bottom: 5px; 
+        }
+        input[type="password"],
+        input[type="pass"] {
+            width: 200px; 
+            padding: 10px; 
+            margin-bottom: 5px; 
+        }
+
+        input[type="submit"] {
+            width: 200px; 
+            padding: 5px;
+            background-color: rgb(195, 242, 6);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        } /*Параметри вікна заголовка*/
+
+</style>
+</head>
+<body style="background-image: url(https://bogatyr.club/uploads/posts/2023-02/1675390234_bogatyr-club-p-zelenii-fon-granzh-krasivii-fon-1.jpg);"> <!--Фон-->
+<h1 align="center" class="h1">Розклад занять </h1> <!--Заголовок-->
+<table align="center"> <!--Розміщення таблиці-->
+<tr> <!--Перший рядок таблиці-->
+  <td>Час занять/день тижня</td>  
+  <td>Понеділок</td>   
+  <td>Вівторок</td> 
+  <td>Середа</td> 
+  <td>Четвер</td> 
+  <td>П'ятниця</td> 
+  <td>Субота</td> 
+</tr>
+<tr>
+    <td>08:30-09:15<br>09:20-10:05</td>
+    <td>Фізичне виховання</td>
+    <td>Іноземна мова</td>
+    <td>ЗВП</td>
+    <td>ТІМ </td>
+    <td>Фізичне виховання</td>
+    <td>СР</td>
+</tr>
+<tr>
+    <td>10:25-11:10<br>11:15-12:00</td>
+    <td>Правознавство</td>
+    <td>ЗВП</td>
+    <td>ТІК</td>
+    <td>Фізичне виховання</td>
+    <td>СР</td>
+    <td>Програмування</td>
+</tr>
+<tr>
+    <td>12:20-13:05<br>13:10-13:55</td>
+    <td>Теорія сигналів</td>
+    <td>Правознавство</td>
+    <td>Програмування</td>
+    <td>Теорія сигналів</td>
+    <td>Іноземна мова</td>
+    <td>ТІМ</td>
+</tr>
+<tr>
+    <td>16:10-16:55<br>17:00-17:45</td>
+    <td>СР</td>
+    <td>СР</td>
+    <td>СР</td>
+    <td>Фізичне виховання</td>
+    <td>СР</td>
+    <td>СР</td>
+</tr>
+    <img width="250px" height="250px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/%D0%93%D0%B5%D1%80%D0%B1_%D0%BB%D0%B8%D1%86%D0%B5%D1%8F_2020_%28%D0%B1%D0%B5%D0%B7_%D1%81%D0%BB%D0%BE%D0%B2%D0%B0_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%29.png/330px-%D0%93%D0%B5%D1%80%D0%B1_%D0%BB%D0%B8%D1%86%D0%B5%D1%8F_2020_%28%D0%B1%D0%B5%D0%B7_%D1%81%D0%BB%D0%BE%D0%B2%D0%B0_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%29.png" alt="" class="img1"> <!--Картинка-->
+    <div class="form-container"> <!--Форма-->
+        <form action="submit" method="post" target="_blank" onsubmit="return validateForm()">
+        <b>Реєстрація</b>
+        <label for="name">Ім'я</label>
+        <input type="text" id="name" name="name" required><br><br> <!--Поле для вводу імені-->
+        <label for="surname">Прізвище</label>
+        <input type="text" id="surname" name="surname" required><br><br> 
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="confirm_password">Підтвердження паролю</label>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+        <input type="submit" value="Зареєструватись">
+    </form>
+
+    <script> /*Перевірка паролів на співпадіння*/
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
+
+            if (password !== confirm_password) {
+                alert("Паролі не співпадають");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
